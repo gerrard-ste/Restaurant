@@ -1,15 +1,23 @@
-from bs4 import BeautifulSoup
-import requests
+{% extends 'base.html' %}
 
-#Make a GET request to the website
-url = 'https://www.bestrestaurantsmaroc.com/'
-response = requests.get(url)
+{% block content %}
 
-#Create a BeautifulSoup object with the HTML content
-soup = BeautifulSoup(response.content, 'html.parser')
-
-#Use BeautifulSoup to parse and manipulate the HTML
-#Example: Print the title of the webpage
-title = soup.title
-print(titl
+    <div class="container">
+        <div class="row">
+            {% for restaurant in restaurants %}
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="{{ restaurant.image }}" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ restaurant.name }}</h5>
+                            <h5 class="card-title">{{ restaurant.description }}</h5>
+                            <p class="card-text">{{ restaurant.ville }}</p>
+                            <a href="#" class="btn btn-primary">Voir detaille</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
 
