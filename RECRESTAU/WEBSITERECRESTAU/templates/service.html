@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-    <div class="container">
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/service.css' %}">
+    <div class="container service-container">
         <div class="row">
             {% for restaurant in restaurants %}
                 <div class="col-md-4">

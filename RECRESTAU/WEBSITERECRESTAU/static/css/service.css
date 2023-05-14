@@ -1,0 +1,20 @@
+.service-container{
+    margin-top: 100px;
+    cursor:pointer;
+
+}
+.service-container .card{
+    margin-top: 20px;
+    box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.4);
+    cursor: pointer;
+}
+.card img{
+    cursor:pointer;
+    filter: grayscale(10%)
+}
+.card img:hover{
+    cursor:pointer;
+    filter: grayscale(90%);
+    transition-duration: 2s;
+}
+
