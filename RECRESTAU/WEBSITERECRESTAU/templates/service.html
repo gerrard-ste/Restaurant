@@ -1,0 +1,15 @@
+from bs4 import BeautifulSoup
+import requests
+
+#Make a GET request to the website
+url = 'https://www.bestrestaurantsmaroc.com/'
+response = requests.get(url)
+
+#Create a BeautifulSoup object with the HTML content
+soup = BeautifulSoup(response.content, 'html.parser')
+
+#Use BeautifulSoup to parse and manipulate the HTML
+#Example: Print the title of the webpage
+title = soup.title
+print(titl
+
