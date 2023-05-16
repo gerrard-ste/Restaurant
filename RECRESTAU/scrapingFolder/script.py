@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import mysql.connector
-url= requests.get(f'https://www.bestrestaurantsmaroc.com/fr/recherche/ville/marrakech.html')
+url= requests.get('https://www.bestrestaurantsmaroc.com/fr/recherche/ville/marrakech.html')
 def main(url):
     cnx = mysql.connector.connect(user='root', password='', host='127.0.0.1', database='datarestau')
     cursor = cnx.cursor()
